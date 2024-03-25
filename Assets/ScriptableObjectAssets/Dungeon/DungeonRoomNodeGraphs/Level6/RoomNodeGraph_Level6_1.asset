@@ -1,0 +1,799 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9120027453843950804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 8919ca1a-f48a-4ede-b045-0b39b3eab0ff
+  parentRoomNodeIDList:
+  - c3972897-c1c1-4bc0-87d2-7597121d19d0
+  childRoomNodeIDList:
+  - 4689b2c9-bf9f-4224-adf5-51bf7630e01b
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 62898875ecb452d49b359c95f092e24a, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -512
+    y: 610
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &-7769604862641679957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: d1a8313b-d627-424e-a4f4-73efe29efd01
+  parentRoomNodeIDList:
+  - 82c32d7b-c94c-4526-bb40-2861de67e49a
+  childRoomNodeIDList: []
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 5a5971254c99058479510ecd29f684f7, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -1008
+    y: 817
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &-6052286258130933266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: e1eb081d-ce4d-44db-a1c7-1ad870e95901
+  parentRoomNodeIDList:
+  - 5de62644-f70c-4939-97f9-934aa8ffae18
+  childRoomNodeIDList:
+  - 83ad0f08-7629-484d-a99b-85a626965f17
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 16db38066bcfc5e4db2225470b042509, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -280
+    y: -3
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &-5315656973809158345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 6296022a-89a8-4c72-9f70-32cd94aacd2f
+  parentRoomNodeIDList:
+  - c3972897-c1c1-4bc0-87d2-7597121d19d0
+  childRoomNodeIDList:
+  - e12dcdd7-90db-4037-8b1f-0e8875798a5e
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 62898875ecb452d49b359c95f092e24a, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -517
+    y: 350
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &-5064930153506699398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 93d5fb47-2d55-46ef-a8b9-3e3d54d710bf
+  parentRoomNodeIDList:
+  - 7f8170d7-899a-41ea-9dce-4434a1c13625
+  childRoomNodeIDList: []
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 8c796a42ed2ecf9438e9f4e142816ba8, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: 838
+    y: 370
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &-3954266512754739700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: c8473d2d-c9d8-43fd-878c-d456c650b67a
+  parentRoomNodeIDList:
+  - 5650e4de-9f77-4c23-86e1-79fcc2fa0b50
+  childRoomNodeIDList: []
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 5a5971254c99058479510ecd29f684f7, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: 197
+    y: -4
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &-3470483041497539890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: fd5752a2-400f-42d2-ad46-372bafb3a821
+  parentRoomNodeIDList:
+  - 84dc2037-a2b9-46ee-bba1-61b61ade7232
+  childRoomNodeIDList:
+  - 69a19115-9a59-42c8-9de5-4e2e28147e93
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 62898875ecb452d49b359c95f092e24a, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: 133
+    y: 317
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &-2308755341478344826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 5de62644-f70c-4939-97f9-934aa8ffae18
+  parentRoomNodeIDList:
+  - ba34c720-3b61-4f7c-babb-d175e7e18093
+  childRoomNodeIDList:
+  - e1eb081d-ce4d-44db-a1c7-1ad870e95901
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 62898875ecb452d49b359c95f092e24a, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -463
+    y: -87
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &-1395124640085942258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 48be1c98-a7ed-44e8-959a-e2910149c032
+  parentRoomNodeIDList:
+  - 84dc2037-a2b9-46ee-bba1-61b61ade7232
+  childRoomNodeIDList:
+  - 216271e0-0ec2-4338-a834-60ae76a5c109
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 62898875ecb452d49b359c95f092e24a, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: 316
+    y: 231
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &-1069087004428673348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: daf2e658-4f6e-4c26-9f8d-18e2ac8b900f
+  parentRoomNodeIDList: []
+  childRoomNodeIDList:
+  - 82c32d7b-c94c-4526-bb40-2861de67e49a
+  - b11dee32-29e2-46a8-8424-675729faf443
+  - 1702badf-96b2-4981-bc98-648e4a78b384
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 73127e19a579a3f4389053aaff393e11, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -1007
+    y: 502
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ae58de741041643963eff1e3a18828, type: 3}
+  m_Name: RoomNodeGraph_Level6_1
+  m_EditorClassIdentifier: 
+  roomNodeTypeList: {fileID: 0}
+  roomNodeList:
+  - {fileID: -1069087004428673348}
+  - {fileID: 9031574936122969846}
+  - {fileID: 8098978814727142576}
+  - {fileID: -7769604862641679957}
+  - {fileID: 6462702422943859907}
+  - {fileID: 4425187062891727365}
+  - {fileID: 6148386675887929422}
+  - {fileID: -9120027453843950804}
+  - {fileID: 2061721808860217843}
+  - {fileID: 2347164696048180175}
+  - {fileID: 1772498743063074388}
+  - {fileID: -5315656973809158345}
+  - {fileID: 7228977353725489035}
+  - {fileID: 958101225967975671}
+  - {fileID: 6224627668314941746}
+  - {fileID: -2308755341478344826}
+  - {fileID: -6052286258130933266}
+  - {fileID: 6102366746203161337}
+  - {fileID: 6030856724641784586}
+  - {fileID: 277619729396731871}
+  - {fileID: -3470483041497539890}
+  - {fileID: -3954266512754739700}
+  - {fileID: 7899305179535980169}
+  - {fileID: -1395124640085942258}
+  - {fileID: 6533685385165885376}
+  - {fileID: 2556838116395229062}
+  - {fileID: -5064930153506699398}
+  roomNodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
+--- !u!114 &277619729396731871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 5650e4de-9f77-4c23-86e1-79fcc2fa0b50
+  parentRoomNodeIDList:
+  - 84dc2037-a2b9-46ee-bba1-61b61ade7232
+  childRoomNodeIDList:
+  - c8473d2d-c9d8-43fd-878c-d456c650b67a
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 62898875ecb452d49b359c95f092e24a, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: 154
+    y: 102
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &958101225967975671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: de3d3789-5815-4479-87fb-3e70254d8447
+  parentRoomNodeIDList:
+  - e12dcdd7-90db-4037-8b1f-0e8875798a5e
+  childRoomNodeIDList:
+  - ba34c720-3b61-4f7c-babb-d175e7e18093
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 62898875ecb452d49b359c95f092e24a, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -528
+    y: 126
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &1772498743063074388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 675eb4c9-b452-456f-b91a-346307a5cf16
+  parentRoomNodeIDList:
+  - 53c6e649-0d41-4370-84d9-8229b4a62ab5
+  childRoomNodeIDList: []
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 16db38066bcfc5e4db2225470b042509, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -215
+    y: 597
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &2061721808860217843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 4689b2c9-bf9f-4224-adf5-51bf7630e01b
+  parentRoomNodeIDList:
+  - 8919ca1a-f48a-4ede-b045-0b39b3eab0ff
+  childRoomNodeIDList:
+  - 53c6e649-0d41-4370-84d9-8229b4a62ab5
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 6760a8012a5a9ac4e9d1d830bf0cecce, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -421
+    y: 738
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &2347164696048180175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 53c6e649-0d41-4370-84d9-8229b4a62ab5
+  parentRoomNodeIDList:
+  - 4689b2c9-bf9f-4224-adf5-51bf7630e01b
+  childRoomNodeIDList:
+  - 675eb4c9-b452-456f-b91a-346307a5cf16
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 62898875ecb452d49b359c95f092e24a, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -223
+    y: 740
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &2556838116395229062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 7f8170d7-899a-41ea-9dce-4434a1c13625
+  parentRoomNodeIDList:
+  - 216271e0-0ec2-4338-a834-60ae76a5c109
+  childRoomNodeIDList:
+  - 93d5fb47-2d55-46ef-a8b9-3e3d54d710bf
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 62898875ecb452d49b359c95f092e24a, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: 829
+    y: 254
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &4425187062891727365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 41e1e2f5-7a46-4411-8282-17f082f841cf
+  parentRoomNodeIDList:
+  - 1702badf-96b2-4981-bc98-648e4a78b384
+  childRoomNodeIDList: []
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: fdb9add4c9fe9564d9b22a280966ced0, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -1024
+    y: 226
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &6030856724641784586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 84dc2037-a2b9-46ee-bba1-61b61ade7232
+  parentRoomNodeIDList:
+  - 83ad0f08-7629-484d-a99b-85a626965f17
+  childRoomNodeIDList:
+  - 5650e4de-9f77-4c23-86e1-79fcc2fa0b50
+  - fd5752a2-400f-42d2-ad46-372bafb3a821
+  - 48be1c98-a7ed-44e8-959a-e2910149c032
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: fdb9add4c9fe9564d9b22a280966ced0, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: 39
+    y: 206
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &6102366746203161337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 83ad0f08-7629-484d-a99b-85a626965f17
+  parentRoomNodeIDList:
+  - e1eb081d-ce4d-44db-a1c7-1ad870e95901
+  childRoomNodeIDList:
+  - 84dc2037-a2b9-46ee-bba1-61b61ade7232
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 62898875ecb452d49b359c95f092e24a, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -199
+    y: 149
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &6148386675887929422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: c3972897-c1c1-4bc0-87d2-7597121d19d0
+  parentRoomNodeIDList:
+  - b11dee32-29e2-46a8-8424-675729faf443
+  childRoomNodeIDList:
+  - 8919ca1a-f48a-4ede-b045-0b39b3eab0ff
+  - 6296022a-89a8-4c72-9f70-32cd94aacd2f
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 5a5971254c99058479510ecd29f684f7, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -520
+    y: 502
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &6224627668314941746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: ba34c720-3b61-4f7c-babb-d175e7e18093
+  parentRoomNodeIDList:
+  - de3d3789-5815-4479-87fb-3e70254d8447
+  childRoomNodeIDList:
+  - 5de62644-f70c-4939-97f9-934aa8ffae18
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 5a5971254c99058479510ecd29f684f7, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -517
+    y: 27
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &6462702422943859907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 1702badf-96b2-4981-bc98-648e4a78b384
+  parentRoomNodeIDList:
+  - daf2e658-4f6e-4c26-9f8d-18e2ac8b900f
+  childRoomNodeIDList:
+  - 41e1e2f5-7a46-4411-8282-17f082f841cf
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 62898875ecb452d49b359c95f092e24a, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -1023
+    y: 349
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &6533685385165885376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 216271e0-0ec2-4338-a834-60ae76a5c109
+  parentRoomNodeIDList:
+  - 48be1c98-a7ed-44e8-959a-e2910149c032
+  childRoomNodeIDList:
+  - 7f8170d7-899a-41ea-9dce-4434a1c13625
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 6760a8012a5a9ac4e9d1d830bf0cecce, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: 576
+    y: 230
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &7228977353725489035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: e12dcdd7-90db-4037-8b1f-0e8875798a5e
+  parentRoomNodeIDList:
+  - 6296022a-89a8-4c72-9f70-32cd94aacd2f
+  childRoomNodeIDList:
+  - de3d3789-5815-4479-87fb-3e70254d8447
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: fdb9add4c9fe9564d9b22a280966ced0, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -521
+    y: 222
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &7899305179535980169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 69a19115-9a59-42c8-9de5-4e2e28147e93
+  parentRoomNodeIDList:
+  - fd5752a2-400f-42d2-ad46-372bafb3a821
+  childRoomNodeIDList: []
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 5a5971254c99058479510ecd29f684f7, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: 218
+    y: 484
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &8098978814727142576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: 82c32d7b-c94c-4526-bb40-2861de67e49a
+  parentRoomNodeIDList:
+  - daf2e658-4f6e-4c26-9f8d-18e2ac8b900f
+  childRoomNodeIDList:
+  - d1a8313b-d627-424e-a4f4-73efe29efd01
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 62898875ecb452d49b359c95f092e24a, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -1007
+    y: 666
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
+--- !u!114 &9031574936122969846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e852fb9e65ca52b45a604fe70fac16e2, type: 3}
+  m_Name: RoomNode
+  m_EditorClassIdentifier: 
+  id: b11dee32-29e2-46a8-8424-675729faf443
+  parentRoomNodeIDList:
+  - daf2e658-4f6e-4c26-9f8d-18e2ac8b900f
+  childRoomNodeIDList:
+  - c3972897-c1c1-4bc0-87d2-7597121d19d0
+  roomNodeGraph: {fileID: 11400000}
+  roomNodeType: {fileID: 11400000, guid: 62898875ecb452d49b359c95f092e24a, type: 2}
+  roomNodeTypeList: {fileID: 11400000, guid: 31ac10bd8555ac94688f7003c70cb4cc, type: 2}
+  rect:
+    serializedVersion: 2
+    x: -770
+    y: 500
+    width: 160
+    height: 75
+  isLeftClickDragging: 0
+  isSelected: 0
