@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1ae58de741041643963eff1e3a18828, type: 3}
-  m_Name: RoomNodeGraph_Level3_4 1
+  m_Name: RoomNodeGraph_Level3_4
   m_EditorClassIdentifier: 
   roomNodeTypeList: {fileID: 0}
   roomNodeList:
