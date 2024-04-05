@@ -1,6 +1,9 @@
 using System.Linq;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+using Random = UnityEngine.Random;
 
 
 [DisallowMultipleComponent]
@@ -11,6 +14,7 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
     private List<RoomTemplateSO> roomTemplateList = null;
     private RoomNodeTypeListSO roomNodeTypeList;
     private bool dungeonBuildSuccessfull;
+    
 
     protected override void Awake()
     {
@@ -451,7 +455,23 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
 
     private void InstantiateRoomGameObjects()
     {
+        foreach (KeyValuePair<string,Room> keyValuePair in dungeonBuilderRoomDictionary)
+        {
+            Room room = keyValuePair.Value;
 
+            Vector3 roomPosition = new Vector3(room.lowerBounds.x - room.roomTemplateLowerBounds.x,
+                room.lowerBounds.y - room.roomTemplateLowerBounds.y, 0f);
+
+            GameObject roomGameObject = Instantiate(room.prefab, roomPosition, Quaternion.identity, transform);
+
+            InstantiatedRoom instantiatedRoom = roomGameObject.GetComponentInChildren<InstantiatedRoom>();
+
+            instantiatedRoom.room = room;
+            
+            instantiatedRoom.Initialize(roomGameObject);
+
+            room.instantiatedRoom = instantiatedRoom;
+        }
     }
 
     //get room template by room template ID
