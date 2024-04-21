@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="76b62fcb-4e50-4ca6-a899-90d4cbc3201c" name="Changes" comment="Roll movement added.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gungeon Dunner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gungeon Dunner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/CinemachineTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/CinemachineTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CourseAssets/Animation/Dungeon/Doors/DoorNS/DoorNS.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CourseAssets/Animation/Dungeon/Doors/DoorNS/DoorNS.controller" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +54,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "11-Player__Movement__Control",
+    "git-widget-placeholder": "12-Dungeon__Doors__Lighting",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
