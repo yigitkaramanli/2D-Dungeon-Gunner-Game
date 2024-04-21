@@ -12,6 +12,12 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(PolygonCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(AimWeaponEvent))]
+[RequireComponent(typeof(AimWeapon))]
+[RequireComponent(typeof(IdleEvent))]
+[RequireComponent(typeof(Idle))]
+[RequireComponent(typeof(PlayerControl))]
+[RequireComponent(typeof(AnimatePlayer))]
 [DisallowMultipleComponent]
 #endregion
 public class Player : MonoBehaviour
@@ -28,12 +34,21 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public Animator animator;
 
+    [HideInInspector]
+    public IdleEvent idleEvent;
+
+    [HideInInspector]
+    public AimWeaponEvent aimWeaponEvent;
+    
+
     private void Awake()
     {
         //load components
         health = GetComponent<Health>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        idleEvent = GetComponent<IdleEvent>();
+        aimWeaponEvent = GetComponent<AimWeaponEvent>();
     }
     
     //Initialize the player
