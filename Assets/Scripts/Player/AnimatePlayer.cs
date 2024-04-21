@@ -19,6 +19,7 @@ public class AnimatePlayer : MonoBehaviour
     private void OnEnable()
     {
         //subscribe to events
+        player.movementToPositionEvent.OnMovementToPosition += MovementToPositionEvent_OnMovementToPosition;
         player.movementByVelocityEvent.OnMovementByVelocity += MovementByVelocityEvent_OnMovementByVelocity;
         player.idleEvent.OnIdle += IdleEvent_OnIdle;
         player.aimWeaponEvent.OnWeaponAim += AimWeaponEvent_OnWeaponAim;
@@ -27,19 +28,29 @@ public class AnimatePlayer : MonoBehaviour
     private void OnDisable()
     {
         //Unsubscribe from the events
+        player.movementToPositionEvent.OnMovementToPosition -= MovementToPositionEvent_OnMovementToPosition;
         player.movementByVelocityEvent.OnMovementByVelocity -= MovementByVelocityEvent_OnMovementByVelocity;
         player.idleEvent.OnIdle -= IdleEvent_OnIdle;
         player.aimWeaponEvent.OnWeaponAim -= AimWeaponEvent_OnWeaponAim;
     }
 
+    private void MovementToPositionEvent_OnMovementToPosition(MovementToPositionEvent movementToPositionEvent, MovementToPositionEventArgs movementToPositionEventArgs)
+    { 
+       InitializeAimAnimationParameters();
+       InitializeRollAnimationParameters();
+       SetMovementToPositionAnimationParameters(movementToPositionEventArgs);
+    }
+
     private void MovementByVelocityEvent_OnMovementByVelocity(MovementByVelocityEvent movementByVelocityEvent,
         MovementByVelocityEventArgs movementByVelocityEventArgs)
     {
+        InitializeRollAnimationParameters();
         SetMovementAnimationParameters();
     }
 
     private void IdleEvent_OnIdle(IdleEvent idleEvent)
     {
+        InitializeRollAnimationParameters();
         SetIdleAnimationParameters();
     }
     
@@ -47,7 +58,7 @@ public class AnimatePlayer : MonoBehaviour
      private void AimWeaponEvent_OnWeaponAim(AimWeaponEvent aimWeaponEvent, AimWeaponEventArgs aimWeaponEventArgs)
      {
          InitializeAimAnimationParameters();
-
+         InitializeRollAnimationParameters();
          SetAimWeaponAnimationParameters(aimWeaponEventArgs.aimDirection);
      }
 
@@ -61,10 +72,42 @@ public class AnimatePlayer : MonoBehaviour
          player.animator.SetBool(Settings.aimUpRight, false);
      }
 
+     private void InitializeRollAnimationParameters()
+     {
+         player.animator.SetBool(Settings.rollDown, false);
+         player.animator.SetBool(Settings.rollLeft, false);
+         player.animator.SetBool(Settings.rollRight, false);
+         player.animator.SetBool(Settings.rollUp, false);
+
+     }
+
      private void SetMovementAnimationParameters()
      {
          player.animator.SetBool(Settings.isMoving, true);
          player.animator.SetBool(Settings.isIdle, false);
+     }
+
+     private void SetMovementToPositionAnimationParameters(MovementToPositionEventArgs movementToPositionEventArgs)
+     {
+         if (movementToPositionEventArgs.isRolling)
+         {
+             if (movementToPositionEventArgs.moveDirection.x > 0f)
+             {
+                 player.animator.SetBool(Settings.rollRight, true);
+             } 
+             else if (movementToPositionEventArgs.moveDirection.x < 0f)
+             {
+                 player.animator.SetBool(Settings.rollLeft, true);
+             }
+             else if (movementToPositionEventArgs.moveDirection.y > 0f)
+             {
+                 player.animator.SetBool(Settings.rollUp, true);
+             }
+             else if (movementToPositionEventArgs.moveDirection.y < 0f)
+             {
+                 player.animator.SetBool(Settings.rollDown, true);
+             }
+         }
      }
 
      private void SetIdleAnimationParameters()

@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76b62fcb-4e50-4ca6-a899-90d4cbc3201c" name="Changes" comment="Cursor changed.">
+    <list default="true" id="76b62fcb-4e50-4ca6-a899-90d4cbc3201c" name="Changes" comment="Player Movement using the arrow keys implemented.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gungeon Dunner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gungeon Dunner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/Movement/MovementDetails_Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/Movement/MovementDetails_Player.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/Movement/MovementDetails_Player_Thief.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/Movement/MovementDetails_Player_Thief.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/MovementDetailsSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/MovementDetailsSO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/AnimatePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/AnimatePlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerDetailsSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerDetailsSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/HelperUtilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/HelperUtilities.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +36,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/IdleEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementByVelocity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementByVelocityEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementToPosition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementToPositionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Player/AnimatePlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/AnimatePlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeaponEvent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -125,7 +130,7 @@
       <workItem from="1713203032000" duration="3170000" />
       <workItem from="1713238173890" duration="2391000" />
       <workItem from="1713435805544" duration="3738000" />
-      <workItem from="1713695753869" duration="4402000" />
+      <workItem from="1713695753869" duration="8665000" />
     </task>
     <task id="LOCAL-00001" summary="Dungeons are created and rooms are instantiated. next is closing on unused doorways.">
       <option name="closed" value="true" />
@@ -183,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713699157597</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Player Movement using the arrow keys implemented.">
+      <option name="closed" value="true" />
+      <created>1713702084424</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713702084424</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +225,7 @@
     <MESSAGE value="." />
     <MESSAGE value="Player &amp; Weapon direction controls added. Weapon and player now follows cursor movement." />
     <MESSAGE value="Cursor changed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cursor changed." />
+    <MESSAGE value="Player Movement using the arrow keys implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Player Movement using the arrow keys implemented." />
   </component>
 </project>
