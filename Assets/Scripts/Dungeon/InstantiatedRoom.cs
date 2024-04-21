@@ -225,6 +225,14 @@ public class InstantiatedRoom : MonoBehaviour
                     door.transform.localPosition =
                         new Vector3(doorway.position.x, doorway.position.y + tileDistance * 1.25f, 0f);
                 }
+
+                Door doorComponent = door.GetComponent<Door>();
+                if (room.roomNodeType.isBossRoom)
+                {
+                    doorComponent.isBossRoomDoor = true;
+                    
+                    doorComponent.LockDoor();
+                }
             }
         }
     }

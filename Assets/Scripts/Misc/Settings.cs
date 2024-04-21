@@ -9,6 +9,7 @@ public static class Settings
     public const float tileSizePixels = 16f;
     #endregion
     
+    
     #region DUNGEON BUILD SETTINGS
     public const int maxDungeonRebuildAttemptsForRoomGraph = 100;
     public const int maxDungeonBuildAttempts = 10;
@@ -33,5 +34,14 @@ public static class Settings
     public static int rollRight = Animator.StringToHash("rollRight");
     public static int rollLeft = Animator.StringToHash("rollLeft");
     public static int rollDown = Animator.StringToHash("rollDown");
+    
+    //door
+    public static int open = Animator.StringToHash("open");
+    #endregion
+
+
+    #region GAMEOBJECT TAGS
+    public const string playerTag = "Player";
+    public const string playerWeapon = "PlayerWeapon";
     #endregion
 }
