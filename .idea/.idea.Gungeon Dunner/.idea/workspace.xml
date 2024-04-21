@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76b62fcb-4e50-4ca6-a899-90d4cbc3201c" name="Changes" comment="" />
+    <list default="true" id="76b62fcb-4e50-4ca6-a899-90d4cbc3201c" name="Changes" comment="Roll movement added.">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gungeon Dunner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gungeon Dunner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/CinemachineTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/CinemachineTarget.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,16 +16,27 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="10-Player" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Dungeon/DungeonBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scenes/MainGameScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Game Manager/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Player/CurrentPlayerSO.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Enums/Enums.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/ScreenCursor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/Idle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/IdleEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementByVelocity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementByVelocityEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementToPosition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementToPositionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Player/AnimatePlayer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/AnimatePlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Player/AnimatePlayer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeaponEvent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -36,26 +50,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "11-Player__Movement__Control",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/yigitkaramanli/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/yigitkaramanli/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
-      &quot;/Users/yigitkaramanli/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/yigitkaramanli/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/Users/yigitkaramanli/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache",
+      "/Users/yigitkaramanli/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.1.7f1/Unity.app/Contents/MacOS/Unity" />
@@ -108,6 +123,9 @@
       <workItem from="1712361994233" duration="15000" />
       <workItem from="1713170953661" duration="5612000" />
       <workItem from="1713203032000" duration="3170000" />
+      <workItem from="1713238173890" duration="2391000" />
+      <workItem from="1713435805544" duration="3738000" />
+      <workItem from="1713695753869" duration="9441000" />
     </task>
     <task id="LOCAL-00001" summary="Dungeons are created and rooms are instantiated. next is closing on unused doorways.">
       <option name="closed" value="true" />
@@ -141,7 +159,47 @@
       <option name="project" value="LOCAL" />
       <updated>1713238022350</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=".">
+      <option name="closed" value="true" />
+      <created>1713238251002</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713238251002</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Player &amp; Weapon direction controls added. Weapon and player now follows cursor movement.">
+      <option name="closed" value="true" />
+      <created>1713698559554</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713698559554</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Cursor changed.">
+      <option name="closed" value="true" />
+      <created>1713699157597</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713699157597</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Player Movement using the arrow keys implemented.">
+      <option name="closed" value="true" />
+      <created>1713702084424</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713702084424</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Roll movement added.">
+      <option name="closed" value="true" />
+      <created>1713706433287</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713706433287</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +225,11 @@
     <MESSAGE value="Unused doorways are now blocked. Dungeon Builder Completed." />
     <MESSAGE value="Thief player created. Player animations for idle, movement and rolling set up" />
     <MESSAGE value="Player initialization and cinemachine target creation completed. Initial player setup completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Player initialization and cinemachine target creation completed. Initial player setup completed." />
+    <MESSAGE value="." />
+    <MESSAGE value="Player &amp; Weapon direction controls added. Weapon and player now follows cursor movement." />
+    <MESSAGE value="Cursor changed." />
+    <MESSAGE value="Player Movement using the arrow keys implemented." />
+    <MESSAGE value="Roll movement added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Roll movement added." />
   </component>
 </project>
