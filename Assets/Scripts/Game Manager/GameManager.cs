@@ -88,6 +88,8 @@ public class GameManager : SingletonMonobehavior<GameManager>
         {
             Debug.LogError("Could not build dungeon from specified rooms and node graphs.");
         }
+        
+        StaticEventHandler.CallRoomChangedEvent(currentRoom);
 
         player.gameObject.transform.position = new Vector3((currentRoom.lowerBounds.x + currentRoom.upperBounds.x) / 2f,
             (currentRoom.lowerBounds.y + currentRoom.upperBounds.y) / 2f, 0f);
@@ -99,6 +101,11 @@ public class GameManager : SingletonMonobehavior<GameManager>
     public Room GetCurrentRoom()
     {
         return currentRoom;
+    }
+    
+    public Player GetPlayer()
+    {
+        return player;
     }
 
     #region Validation
@@ -112,8 +119,5 @@ public class GameManager : SingletonMonobehavior<GameManager>
     #endregion
 
 
-    public Player GetPlayer()
-    {
-        return player;
-    }
+    
 }

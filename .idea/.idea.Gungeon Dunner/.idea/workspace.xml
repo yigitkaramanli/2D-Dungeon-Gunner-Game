@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76b62fcb-4e50-4ca6-a899-90d4cbc3201c" name="Changes" comment="Roll movement added.">
+    <list default="true" id="76b62fcb-4e50-4ca6-a899-90d4cbc3201c" name="Changes" comment="Rooms and doors are now fading in when player triggers them by getting into or close to them, and are otherwise not lit.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gungeon Dunner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gungeon Dunner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/CinemachineTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/CinemachineTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +23,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/CourseAssets/Animation/Dungeon/Doors/DoorNS/DoorNS.controller" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Prefabs/Dungeon/Doors/DoorNS/DoorNS.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Prefabs/Dungeon/Rooms/Catacombs/BossRoom_Catacombs_1.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Prefabs/Player/Player.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scenes/MainGameScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/Door.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/DoorLightingControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Dungeon/InstantiatedRoom.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/RoomLightingControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Enums/Enums.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Misc/CinemachineTarget.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/ScreenCursor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/Idle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/IdleEvent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -32,8 +42,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementByVelocityEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementToPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementToPositionEvent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Player/AnimatePlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/AnimatePlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Player/AnimatePlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Player/AnimatePlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeaponEvent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,7 +64,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "11-Player__Movement__Control",
+    "git-widget-placeholder": "12-Dungeon__Doors__Lighting",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -199,7 +209,39 @@
       <option name="project" value="LOCAL" />
       <updated>1713706433287</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Created Door Prefabs, populated the room scriptable objects with the corresponding door prefabs.">
+      <option name="closed" value="true" />
+      <created>1713709894270</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713709894270</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Instantiated the doors of the rooms.">
+      <option name="closed" value="true" />
+      <created>1713712049757</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713712049757</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Door opening and closing on player trigger added.">
+      <option name="closed" value="true" />
+      <created>1713713387401</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713713387401</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Rooms and doors are now fading in when player triggers them by getting into or close to them, and are otherwise not lit.">
+      <option name="closed" value="true" />
+      <created>1713716051725</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713716051725</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +272,10 @@
     <MESSAGE value="Cursor changed." />
     <MESSAGE value="Player Movement using the arrow keys implemented." />
     <MESSAGE value="Roll movement added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Roll movement added." />
+    <MESSAGE value="Created Door Prefabs, populated the room scriptable objects with the corresponding door prefabs." />
+    <MESSAGE value="Instantiated the doors of the rooms." />
+    <MESSAGE value="Door opening and closing on player trigger added." />
+    <MESSAGE value="Rooms and doors are now fading in when player triggers them by getting into or close to them, and are otherwise not lit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rooms and doors are now fading in when player triggers them by getting into or close to them, and are otherwise not lit." />
   </component>
 </project>
