@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76b62fcb-4e50-4ca6-a899-90d4cbc3201c" name="Changes" comment="Rooms and doors are now fading in when player triggers them by getting into or close to them, and are otherwise not lit.">
+    <list default="true" id="76b62fcb-4e50-4ca6-a899-90d4cbc3201c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gungeon Dunner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gungeon Dunner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/AnimatePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/AnimatePlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,18 +26,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/CourseAssets/Animation/Dungeon/Doors/DoorNS/DoorNS.controller" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Prefabs/Dungeon/Doors/DoorNS/DoorNS.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Prefabs/Dungeon/Rooms/Catacombs/BossRoom_Catacombs_1.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Prefabs/Player/Player.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scenes/MainGameScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/Door.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/DoorLightingControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Dungeon/InstantiatedRoom.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/RoomLightingControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Enums/Enums.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Misc/CinemachineTarget.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/ScreenCursor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/Idle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/IdleEvent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,9 +37,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementByVelocityEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementToPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/MovementToPositionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NewBehaviourScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/AnimatePlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Player/AnimatePlayer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/yigitkaramanli/Desktop/Unity/Gungeon Dunner/Assets/Scripts/Player/AnimatePlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeaponEvent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -60,27 +54,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "12-Dungeon__Doors__Lighting",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;13-Object__Pooling&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/yigitkaramanli/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
-      "/Users/yigitkaramanli/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache",
-      "/Users/yigitkaramanli/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/yigitkaramanli/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/yigitkaramanli/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
+      &quot;/Users/yigitkaramanli/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.1.7f1/Unity.app/Contents/MacOS/Unity" />
@@ -136,6 +130,15 @@
       <workItem from="1713238173890" duration="2391000" />
       <workItem from="1713435805544" duration="3738000" />
       <workItem from="1713695753869" duration="9441000" />
+      <workItem from="1724856128328" duration="60000" />
+      <workItem from="1724856192077" duration="156000" />
+      <workItem from="1724856361154" duration="115000" />
+      <workItem from="1724919308053" duration="17000" />
+      <workItem from="1724920791263" duration="610000" />
+      <workItem from="1724924904629" duration="23000" />
+      <workItem from="1724942352481" duration="9000" />
+      <workItem from="1724942381552" duration="1849000" />
+      <workItem from="1724946217683" duration="637000" />
     </task>
     <task id="LOCAL-00001" summary="Dungeons are created and rooms are instantiated. next is closing on unused doorways.">
       <option name="closed" value="true" />
@@ -255,7 +258,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="13-Object_Pooling" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
