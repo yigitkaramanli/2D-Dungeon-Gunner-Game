@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -44,6 +45,21 @@ public class GameManager : SingletonMonobehavior<GameManager>
 
         player = playerGameObject.GetComponent<Player>();
         player.Initialize(playerDetails);
+    }
+
+    private void OnEnable()
+    {
+        StaticEventHandler.OnRoomChanged += StaticEventHandler_OnRoomChanged;
+    }
+
+    private void OnDisable()
+    {
+        StaticEventHandler.OnRoomChanged -= StaticEventHandler_OnRoomChanged;
+    }
+
+    private void StaticEventHandler_OnRoomChanged(RoomChangedEventArgs roomChangedEventArgs)
+    {
+        SetCurrentRoom(roomChangedEventArgs.room);
     }
 
     private void Start()
