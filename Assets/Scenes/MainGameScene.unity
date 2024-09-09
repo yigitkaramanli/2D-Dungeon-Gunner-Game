@@ -1052,65 +1052,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 200
   m_TargetDisplay: 0
---- !u!1 &1218331976
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1218331978}
-  - component: {fileID: 1218331977}
-  m_Layer: 0
-  m_Name: TestEnemyObjectPool
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1218331977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1218331976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3eca2011eec04145861a61b0a705af7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyAnimationDetailsArray:
-  - animatorController: {fileID: 9100000, guid: 944ecbb1810696b4a8a6781ac1e002a5, type: 2}
-    spriteColor: {r: 0.8396226, g: 0.8259024, b: 0.45545566, a: 1}
-  - animatorController: {fileID: 9100000, guid: 19b6ff9fbadc74e479b63068d33eb245, type: 2}
-    spriteColor: {r: 0.53640085, g: 0.9245283, b: 0.613294, a: 1}
-  - animatorController: {fileID: 9100000, guid: 0f372b3c644e5ce4a9d95f7f7f25d99a, type: 2}
-    spriteColor: {r: 0.69549, g: 0.7075472, b: 0.57071024, a: 1}
-  - animatorController: {fileID: 9100000, guid: cf2b002105910e04a8f79c160b4602a0, type: 2}
-    spriteColor: {r: 0.24630652, g: 0.4245283, b: 0.28178576, a: 1}
-  - animatorController: {fileID: 9100000, guid: 19b6ff9fbadc74e479b63068d33eb245, type: 2}
-    spriteColor: {r: 0.6320754, g: 0.372686, b: 0.372686, a: 1}
-  - animatorController: {fileID: 9100000, guid: 34e8d9a39874e5e4dafae7864069e02b, type: 2}
-    spriteColor: {r: 1, g: 1, b: 1, a: 1}
-  - animatorController: {fileID: 9100000, guid: a0ee566a387dcf744a5564ef5baa059e, type: 2}
-    spriteColor: {r: 0.2682989, g: 0.8867924, b: 0.2216981, a: 1}
-  enemyExamplePrefab: {fileID: 3578434819032411696, guid: 292c3bc65c9154badaecb7584f13a091, type: 3}
---- !u!4 &1218331978
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1218331976}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1265775739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,10 +1663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71c39c70cdc04eda9c0e2ff42ab093f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolArray:
-  - poolSize: 30
-    prefab: {fileID: 3578434819032411696, guid: 292c3bc65c9154badaecb7584f13a091, type: 3}
-    componentType: EnemyAnimation
+  poolArray: []
 --- !u!4 &1843568837
 Transform:
   m_ObjectHideFlags: 0
