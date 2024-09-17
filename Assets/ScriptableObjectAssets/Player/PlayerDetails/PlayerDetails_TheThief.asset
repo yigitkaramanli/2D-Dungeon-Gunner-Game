@@ -16,5 +16,8 @@ MonoBehaviour:
   playerPrefab: {fileID: 3593041600851354635, guid: cb84e5623cbbb478987a7317d6762265, type: 3}
   runtimeAnimatorController: {fileID: 9100000, guid: 5c4ad92dd60e54896b68d63e144250ca, type: 2}
   playerHealthAmount: 80
+  startingWeapon: {fileID: 11400000, guid: 4145525b9722a452c81b6ab768a2e2f1, type: 2}
+  startingWeaponList:
+  - {fileID: 11400000, guid: 4145525b9722a452c81b6ab768a2e2f1, type: 2}
   playerMinimapIcon: {fileID: 21300000, guid: 10f98bc91964c4e3f959ce9d14f6375d, type: 3}
   playerHandSprite: {fileID: 21300000, guid: 5a4e319b3e06d4772959c19e1a64aa98, type: 3}
