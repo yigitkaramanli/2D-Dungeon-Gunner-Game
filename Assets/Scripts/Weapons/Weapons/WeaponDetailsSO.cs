@@ -30,10 +30,10 @@ public class WeaponDetailsSO : ScriptableObject
     #endregion
     public Vector3 weaponShootPosition;
 
-    /*#region Tooltip
+    #region Tooltip
     [Tooltip("Weapon current ammo")]
     #endregion
-    public AmmoDetailsSO weaponCurrentAmmo;*/
+    public AmmoDetailsSO weaponCurrentAmmo;
 
     #region Header WEAPON OPERATING VALUES
     [Space(10)]
@@ -80,7 +80,7 @@ public class WeaponDetailsSO : ScriptableObject
     private void OnValidate()
     { 
         HelperUtilities.ValidateCheckEmptyString(this, nameof(weaponName), weaponName);
-        //HelperUtilities.ValidateCheckNullValue(this, nameof(weaponCurrentAmmo), weaponCurrentAmmo);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(weaponCurrentAmmo), weaponCurrentAmmo);
         HelperUtilities.ValidateCheckPositiveValue(this, nameof(weaponFireRate), weaponFireRate, false);
         HelperUtilities.ValidateCheckPositiveValue(this, nameof(weaponPrechargeTime), weaponPrechargeTime, true);
 
