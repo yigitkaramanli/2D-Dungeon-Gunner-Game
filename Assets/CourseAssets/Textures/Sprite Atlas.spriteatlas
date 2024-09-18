@@ -817,6 +817,7 @@ SpriteAtlas:
   - {fileID: 585492555750498021, guid: ca9a6422e6651ee45836825651a35e3f, type: 3}
   - {fileID: -2707397711903873196, guid: ca9a6422e6651ee45836825651a35e3f, type: 3}
   - {fileID: 8430444257694572113, guid: ca9a6422e6651ee45836825651a35e3f, type: 3}
+  - {fileID: 21300000, guid: 2be8a42228766430db52e4dd67d4c7b8, type: 3}
   - {fileID: 5096345463590902717, guid: ef88e6229f9d508479ce144758719233, type: 3}
   - {fileID: 6466184282079594016, guid: ef88e6229f9d508479ce144758719233, type: 3}
   - {fileID: 2107056869430351448, guid: ef88e6229f9d508479ce144758719233, type: 3}
@@ -5711,6 +5712,7 @@ SpriteAtlas:
   - statue_cerebov_2
   - statue_cerebov_1
   - statue_cerebov_0
+  - Shader Test Colours
   - SlizzardMoveDown_0
   - SlizzardMoveDown_1
   - SlizzardMoveDown_2
