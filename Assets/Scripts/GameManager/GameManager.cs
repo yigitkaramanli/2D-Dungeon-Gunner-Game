@@ -72,10 +72,10 @@ public class GameManager : SingletonMonobehavior<GameManager>
         HandleGameState();
 
         //for testing purposes, delete after
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            gameState = GameState.gameStarted;
-        }
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    gameState = GameState.gameStarted;
+        //}
     }
 
     // Handle the game state
