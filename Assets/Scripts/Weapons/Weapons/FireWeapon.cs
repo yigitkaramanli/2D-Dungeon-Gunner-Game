@@ -107,6 +107,31 @@ public class FireWeapon : MonoBehaviour
 
         if (currentAmmo != null)
         {
+            StartCoroutine(FireAmountRoutine(currentAmmo, aimAngle, weaponAimAngle, weaponAimDirectionVector));
+        }
+    }
+
+    private IEnumerator FireAmountRoutine(AmmoDetailsSO currentAmmo, float aimAngle, float weaponAimAngle,
+        Vector3 weaponAimDirectionVector)
+    {
+        int ammoCounter = 0;
+
+        int ammoPerShot = Random.Range(currentAmmo.ammoSpawnAmountMin, currentAmmo.ammoSpawnAmountMax + 1);
+
+        float ammoSpawnInterval;
+
+        if (ammoPerShot > 1)
+        {
+            ammoSpawnInterval = Random.Range(currentAmmo.ammoSpawnIntervalMin, currentAmmo.ammoSpawnIntervalMax);
+        }
+        else
+        {
+            ammoSpawnInterval = 0;
+        }
+
+        while (ammoCounter < ammoPerShot)
+        {
+            ammoCounter++;
             //Get ammo prefav
             GameObject ammoPrefab = currentAmmo.ammoPrefabArray[Random.Range(0, currentAmmo.ammoPrefabArray.Length)];
             
@@ -120,15 +145,17 @@ public class FireWeapon : MonoBehaviour
             //Initialise the ammo
             ammo.InitialiseAmmo(currentAmmo, aimAngle, weaponAimAngle, ammoSpeed, weaponAimDirectionVector);
 
-            //Reduce clip ammo amount and the total ammo amount if it does not have infinite clip capacity
-            if (!activeWeapon.GetCurrentWeapon().weaponDetails.hasInfiniteClipCapacity)
-            {
-                activeWeapon.GetCurrentWeapon().weaponClipRemainingAmmo--;
-                activeWeapon.GetCurrentWeapon().weaponRemainingAmmo--;
-            }
-            
-            weaponFiredEvent.CallOnWeaponFiredEvent(activeWeapon.GetCurrentWeapon());
+            yield return new WaitForSeconds(ammoSpawnInterval);
         }
+        
+        //Reduce clip ammo amount and the total ammo amount if it does not have infinite clip capacity
+        if (!activeWeapon.GetCurrentWeapon().weaponDetails.hasInfiniteClipCapacity)
+        {
+            activeWeapon.GetCurrentWeapon().weaponClipRemainingAmmo--;
+            activeWeapon.GetCurrentWeapon().weaponRemainingAmmo--;
+        }
+            
+        weaponFiredEvent.CallOnWeaponFiredEvent(activeWeapon.GetCurrentWeapon());
     }
 
     private void ResetCoolDownTimer()
