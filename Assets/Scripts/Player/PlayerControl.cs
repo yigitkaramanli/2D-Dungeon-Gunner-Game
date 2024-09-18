@@ -225,7 +225,11 @@ public class PlayerControl : MonoBehaviour
 
     private void StopPlayerRollRoutine()
     {
-        StopCoroutine(playerRollCoroutine);
+
+        if (playerRollCoroutine != null)
+        {
+            StopCoroutine(playerRollCoroutine);
+        }
 
         isPlayerRolling = false;
     }
