@@ -17,6 +17,9 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(FireWeaponEvent))]
 [RequireComponent(typeof(FireWeapon))]
 [RequireComponent(typeof(WeaponFiredEvent))]
+[RequireComponent(typeof(ReloadWeaponEvent))]
+[RequireComponent(typeof(ReloadWeapon))]
+[RequireComponent(typeof(WeaponReloadedEvent))]
 [RequireComponent(typeof(SetActiveWeaponEvent))]
 [RequireComponent(typeof(ActiveWeapon))]
 [RequireComponent(typeof(IdleEvent))]
@@ -56,6 +59,12 @@ public class Player : MonoBehaviour
     public WeaponFiredEvent weaponFiredEvent;
 
     [HideInInspector] 
+    public ReloadWeaponEvent reloadWeaponEvent;
+
+    [HideInInspector] 
+    public WeaponReloadedEvent weaponReloadedEvent;
+
+    [HideInInspector] 
     public SetActiveWeaponEvent setActiveWeaponEvent;
 
     [HideInInspector] 
@@ -78,6 +87,8 @@ public class Player : MonoBehaviour
         aimWeaponEvent = GetComponent<AimWeaponEvent>();
         fireWeaponEvent = GetComponent<FireWeaponEvent>();
         weaponFiredEvent = GetComponent<WeaponFiredEvent>();
+        reloadWeaponEvent = GetComponent<ReloadWeaponEvent>();
+        weaponReloadedEvent = GetComponent<WeaponReloadedEvent>();
         setActiveWeaponEvent = GetComponent<SetActiveWeaponEvent>();
         activeWeapon = GetComponent<ActiveWeapon>();
         movementByVelocityEvent = GetComponent<MovementByVelocityEvent>();

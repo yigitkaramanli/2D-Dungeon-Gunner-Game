@@ -175,6 +175,9 @@ GameObject:
   - component: {fileID: 6369238258678011565}
   - component: {fileID: 454407974399131090}
   - component: {fileID: 4793828473575809771}
+  - component: {fileID: -6693469346515079113}
+  - component: {fileID: 4346843646493478923}
+  - component: {fileID: -7555448937942946156}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -399,6 +402,8 @@ MonoBehaviour:
   aimWeaponEvent: {fileID: 0}
   fireWeaponEvent: {fileID: 0}
   weaponFiredEvent: {fileID: 0}
+  reloadWeaponEvent: {fileID: 0}
+  weaponReloadedEvent: {fileID: 0}
   setActiveWeaponEvent: {fileID: 0}
   activeWeapon: {fileID: 0}
   movementByVelocityEvent: {fileID: 0}
@@ -587,6 +592,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78309ece74f2847a5abbd938b8aac560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6693469346515079113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3844026147551356745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128a2795e42ea4bd48915fc33d232695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4346843646493478923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3844026147551356745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df18e1a3ccff84dc5bb7fc73fcea77bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7555448937942946156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3844026147551356745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab07209e53788430490c3d1e5a8f6884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3844026148154784000
