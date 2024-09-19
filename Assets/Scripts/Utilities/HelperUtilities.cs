@@ -69,6 +69,15 @@ public static class HelperUtilities
         return aimDirection;
     }
     
+    //Convert Linear volume to scale to decibels
+    public static float LinearToDecibels(int linear)
+    {
+        float linearScaleRange = 20f;
+        
+        //formula to convert from linear scale to logarithmic decibel scale
+        return Mathf.Log10((float)linear / linearScaleRange) * 20f;
+    }
+    
     //Empty string debug check
     public static bool ValidateCheckEmptyString(Object thisObject, string fieldName, string stringToCheck)
     {
