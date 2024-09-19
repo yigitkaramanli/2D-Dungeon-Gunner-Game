@@ -554,7 +554,7 @@ MonoBehaviour:
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2457,6 +2457,9 @@ MonoBehaviour:
   - poolSize: 10
     prefab: {fileID: 2227020654575403849, guid: d52d324b2b3ec48fca2d2d9ee0e60328, type: 3}
     componentType: IFireable
+  - poolSize: 40
+    prefab: {fileID: 6564675441726167781, guid: 290c14073fdef4bab8d1764cfabe6b81, type: 3}
+    componentType: SoundEffect
 --- !u!4 &1843568837
 Transform:
   m_ObjectHideFlags: 0
