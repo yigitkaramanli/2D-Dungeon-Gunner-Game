@@ -60,6 +60,8 @@ public class Door : MonoBehaviour
             
             //play open door animation
             animator.SetBool(Settings.open, true);
+            
+            SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.doorOpenCloseSoundEffect);
         }
     }
 
