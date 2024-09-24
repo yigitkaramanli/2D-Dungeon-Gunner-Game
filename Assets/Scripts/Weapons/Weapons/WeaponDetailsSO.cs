@@ -36,6 +36,12 @@ public class WeaponDetailsSO : ScriptableObject
     public AmmoDetailsSO weaponCurrentAmmo;
 
     #region Tooltip
+    [Tooltip(
+        "Weapon Shoot Effect SO - contains the configuration for particle effect parameters to be used in the weaponShootEffectPrefab")]
+    #endregion
+    public WeaponShootEffectSO weaponShootEffect;
+
+    #region Tooltip
     [Tooltip("The firing sound effect SO for the weapon")]
     #endregion
     public SoundEffectSO weaponFiringSoundEffect;
