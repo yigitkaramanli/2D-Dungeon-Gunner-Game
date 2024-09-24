@@ -107,11 +107,11 @@ public class FireWeapon : MonoBehaviour
 
         if (currentAmmo != null)
         {
-            StartCoroutine(FireAmountRoutine(currentAmmo, aimAngle, weaponAimAngle, weaponAimDirectionVector));
+            StartCoroutine(FireAmmoRoutine(currentAmmo, aimAngle, weaponAimAngle, weaponAimDirectionVector));
         }
     }
 
-    private IEnumerator FireAmountRoutine(AmmoDetailsSO currentAmmo, float aimAngle, float weaponAimAngle,
+    private IEnumerator FireAmmoRoutine(AmmoDetailsSO currentAmmo, float aimAngle, float weaponAimAngle,
         Vector3 weaponAimDirectionVector)
     {
         int ammoCounter = 0;
@@ -156,6 +156,8 @@ public class FireWeapon : MonoBehaviour
         }
             
         weaponFiredEvent.CallOnWeaponFiredEvent(activeWeapon.GetCurrentWeapon());
+
+        WeaponSoundEffect();
     }
 
     private void ResetCoolDownTimer()
@@ -166,5 +168,13 @@ public class FireWeapon : MonoBehaviour
     private void ResetPrechargeTimer()
     {
         firePreChargeTimer = activeWeapon.GetCurrentWeapon().weaponDetails.weaponPrechargeTime;
+    }
+
+    private void WeaponSoundEffect()
+    {
+        if (activeWeapon.GetCurrentWeapon().weaponDetails.weaponFiringSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(activeWeapon.GetCurrentWeapon().weaponDetails.weaponFiringSoundEffect);
+        }
     }
 }
