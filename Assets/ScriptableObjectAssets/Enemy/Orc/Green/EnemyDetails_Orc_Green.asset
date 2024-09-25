@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b7ecc28444347de9bcd3fd31641737, type: 3}
+  m_Name: EnemyDetails_Orc_Green
+  m_EditorClassIdentifier: 
+  enemyName: Orc Green
+  enemyPrefab: {fileID: 6898911114717283049, guid: fc4f1e6d082d04c73b10c57355861439, type: 3}
