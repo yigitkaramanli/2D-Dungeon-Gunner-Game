@@ -8,8 +8,8 @@ public static class Settings
     public const float pixelsPerUnit = 16f;
     public const float tileSizePixels = 16f;
     #endregion
-    
-    
+
+
     #region DUNGEON BUILD SETTINGS
     public const int maxDungeonRebuildAttemptsForRoomGraph = 100;
     public const int maxDungeonBuildAttempts = 10;
@@ -17,7 +17,7 @@ public static class Settings
 
 
     #region ROOM SETTINGS
-    public const float fadeInTime = 0.5f;//fade in time for unexplored rooms 
+    public const float fadeInTime = 0.5f; //fade in time for unexplored rooms 
     public const int maxChildCorridors = 3; // Max number of child corridors leading from a room
     #endregion
 
@@ -36,7 +36,7 @@ public static class Settings
     public static int rollLeft = Animator.StringToHash("rollLeft");
     public static int rollDown = Animator.StringToHash("rollDown");
     public static float baseSpeedForPlayerAnimations = 8f;
-    
+
     //door
     public static int open = Animator.StringToHash("open");
     #endregion
@@ -48,7 +48,14 @@ public static class Settings
     #endregion
 
     #region FIRING CONTROL
-    public const float useAimAngleDistance = 3.5f;// if the target distance is less then this then the aim angle will be used (calculated from player), else the weapon aim angle will be used (calculated from the weapon shoot position).
+    public const float
+        useAimAngleDistance =
+            3.5f; // if the target distance is less then this then the aim angle will be used (calculated from player), else the weapon aim angle will be used (calculated from the weapon shoot position).
+    #endregion
+
+    #region ASTAR PATHFINDING PARAMETERS
+    public const int defaultAStarMovementPenalty = 40;
+    public const int prefferedPathAStarMovementPenalty = 1;
     #endregion
 
     #region UI PARAMETERS
