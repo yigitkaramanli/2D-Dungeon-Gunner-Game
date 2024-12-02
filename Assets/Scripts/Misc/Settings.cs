@@ -55,6 +55,7 @@ public static class Settings
 
     #region ASTAR PATHFINDING PARAMETERS
     public const int defaultAStarMovementPenalty = 40;
+    public const int prefferedPathAStarMovementPenalty = 1;
     #endregion
 
     #region UI PARAMETERS

@@ -55,7 +55,7 @@ public class InstantiatedRoom : MonoBehaviour
 
         BlockOffUnusedDoorways();
 
-        AddObstacles();
+        AddObstaclesAndPreferredPaths();
 
         AddDoorsToRooms();
 
@@ -199,7 +199,7 @@ public class InstantiatedRoom : MonoBehaviour
         }
     }
 
-    private void AddObstacles()
+    private void AddObstaclesAndPreferredPaths()
     {
         aStarMovementPenalty = new int[room.roomTemplateUpperBounds.x - room.roomTemplateLowerBounds.x + 1,
             room.roomTemplateUpperBounds.y - room.roomTemplateLowerBounds.y + 1];
@@ -220,6 +220,11 @@ public class InstantiatedRoom : MonoBehaviour
                         aStarMovementPenalty[x, y] = 0;
                         break;
                     }
+                }
+
+                if (tile == GameResources.Instance.preferredEnemyPathTile)
+                {
+                    aStarMovementPenalty[x, y] = Settings.prefferedPathAStarMovementPenalty;
                 }
             }
         }
