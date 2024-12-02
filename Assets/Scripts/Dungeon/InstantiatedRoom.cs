@@ -8,32 +8,26 @@ using UnityEngine.Tilemaps;
 [RequireComponent(typeof(BoxCollider2D))]
 public class InstantiatedRoom : MonoBehaviour
 {
-    [HideInInspector]
-    public Room room;
+    [HideInInspector] public Room room;
+
+    [HideInInspector] public Grid grid;
+
+    [HideInInspector] public Tilemap groundTilemap;
+
+    [HideInInspector] public Tilemap decoration1Tilemap;
+
+    [HideInInspector] public Tilemap decoration2Tilemap;
+
+    [HideInInspector] public Tilemap frontTilemap;
+
+    [HideInInspector] public Tilemap collisionTilemap;
+
+    [HideInInspector] public Tilemap minimapTilemap;
 
     [HideInInspector]
-    public Grid grid;
+    public int[,] aStarMovementPenalty; //movement penalties from the AStar pathfinding will be stored here.
 
-    [HideInInspector]
-    public Tilemap groundTilemap;
-
-    [HideInInspector]
-    public Tilemap decoration1Tilemap;
-
-    [HideInInspector]
-    public Tilemap decoration2Tilemap;
-
-    [HideInInspector]
-    public Tilemap frontTilemap;
-
-    [HideInInspector]
-    public Tilemap collisionTilemap;
-
-    [HideInInspector]
-    public Tilemap minimapTilemap;
-
-    [HideInInspector]
-    public Bounds roomColliderBounds;
+    [HideInInspector] public Bounds roomColliderBounds;
 
     private BoxCollider2D boxCollider2D;
 
@@ -49,7 +43,7 @@ public class InstantiatedRoom : MonoBehaviour
         if (collision.tag == Settings.playerTag && room != GameManager.Instance.GetCurrentRoom())
         {
             this.room.isPreviouslyVisited = true;
-            
+
             //Call room changed Event 
             StaticEventHandler.CallRoomChangedEvent(room);
         }
@@ -60,6 +54,8 @@ public class InstantiatedRoom : MonoBehaviour
         PopulateTilemapMemberVariables(roomGameObject);
 
         BlockOffUnusedDoorways();
+
+        AddObstacles();
 
         AddDoorsToRooms();
 
@@ -77,14 +73,17 @@ public class InstantiatedRoom : MonoBehaviour
             {
                 BlockADoorwayOnTilemapLayer(collisionTilemap, doorway);
             }
+
             if (minimapTilemap != null)
             {
                 BlockADoorwayOnTilemapLayer(minimapTilemap, doorway);
             }
+
             if (groundTilemap != null)
             {
                 BlockADoorwayOnTilemapLayer(groundTilemap, doorway);
             }
+
             if (decoration1Tilemap != null)
             {
                 BlockADoorwayOnTilemapLayer(decoration1Tilemap, doorway);
@@ -114,7 +113,7 @@ public class InstantiatedRoom : MonoBehaviour
             case Orientation.west:
                 BlockDoorwayVertical(tilemap, doorway);
                 break;
-            
+
             case Orientation.none:
                 break;
         }
@@ -130,8 +129,9 @@ public class InstantiatedRoom : MonoBehaviour
             {
                 Matrix4x4 transformMatrix =
                     tilemap.GetTransformMatrix(new Vector3Int(startPosition.x + xPos, startPosition.y - yPos, 0));
-                
-                tilemap.SetTile(new Vector3Int(startPosition.x + xPos, startPosition.y -1 - yPos, 0), tilemap.GetTile(new Vector3Int(startPosition.x + xPos, startPosition.y - yPos, 0)));
+
+                tilemap.SetTile(new Vector3Int(startPosition.x + xPos, startPosition.y - 1 - yPos, 0),
+                    tilemap.GetTile(new Vector3Int(startPosition.x + xPos, startPosition.y - yPos, 0)));
 
                 tilemap.SetTransformMatrix(new Vector3Int(startPosition.x + xPos, startPosition.y - 1 - yPos, 0),
                     transformMatrix);
@@ -149,10 +149,12 @@ public class InstantiatedRoom : MonoBehaviour
             {
                 Matrix4x4 transformMatrix =
                     tilemap.GetTransformMatrix(new Vector3Int(startPosition.x + xPos, startPosition.y - yPos, 0));
-                
-                tilemap.SetTile(new Vector3Int(startPosition.x + 1 + xPos, startPosition.y - yPos, 0), tilemap.GetTile(new Vector3Int(startPosition.x + xPos, startPosition.y - yPos, 0)));
-                
-                tilemap.SetTransformMatrix(new Vector3Int(startPosition.x + 1 + xPos, startPosition.y - yPos, 0), transformMatrix);
+
+                tilemap.SetTile(new Vector3Int(startPosition.x + 1 + xPos, startPosition.y - yPos, 0),
+                    tilemap.GetTile(new Vector3Int(startPosition.x + xPos, startPosition.y - yPos, 0)));
+
+                tilemap.SetTransformMatrix(new Vector3Int(startPosition.x + 1 + xPos, startPosition.y - yPos, 0),
+                    transformMatrix);
             }
         }
     }
@@ -193,6 +195,32 @@ public class InstantiatedRoom : MonoBehaviour
             else if (tilemap.gameObject.tag == "minimapTilemap")
             {
                 minimapTilemap = tilemap;
+            }
+        }
+    }
+
+    private void AddObstacles()
+    {
+        aStarMovementPenalty = new int[room.roomTemplateUpperBounds.x - room.roomTemplateLowerBounds.x + 1,
+            room.roomTemplateUpperBounds.y - room.roomTemplateLowerBounds.y + 1];
+
+        for (int x = 0; x < (room.roomTemplateUpperBounds.x - room.roomTemplateLowerBounds.x + 1); x++)
+        {
+            for (int y = 0; y < (room.roomTemplateUpperBounds.y - room.roomTemplateLowerBounds.y + 1); y++)
+            {
+                aStarMovementPenalty[x, y] = Settings.defaultAStarMovementPenalty;
+
+                TileBase tile = collisionTilemap.GetTile(new Vector3Int(x + room.roomTemplateLowerBounds.x,
+                    y + room.roomTemplateLowerBounds.y, 0));
+
+                foreach (TileBase collisionTile in GameResources.Instance.enemyUnwalkableCollisionTilesArray)
+                {
+                    if (tile == collisionTile)
+                    {
+                        aStarMovementPenalty[x, y] = 0;
+                        break;
+                    }
+                }
             }
         }
     }
@@ -241,7 +269,7 @@ public class InstantiatedRoom : MonoBehaviour
                 if (room.roomNodeType.isBossRoom)
                 {
                     doorComponent.isBossRoomDoor = true;
-                    
+
                     doorComponent.LockDoor();
                 }
             }
