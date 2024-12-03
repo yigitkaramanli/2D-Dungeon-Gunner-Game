@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
     private CircleCollider2D circleCollider2D;
     private PolygonCollider2D polygonCollider2D;
-    private Animator animator;
+    public Animator animator;
     [HideInInspector] public SpriteRenderer[] spriteRendererArray;
 
     private void Awake()
