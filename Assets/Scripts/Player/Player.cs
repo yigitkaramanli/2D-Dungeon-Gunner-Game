@@ -34,49 +34,36 @@ using UnityEngine.Rendering;
 #endregion
 public class Player : MonoBehaviour
 {
-    [HideInInspector]
-    public PlayerDetailsSO playerDetails;
-    
-    [HideInInspector]
-    public Health health;    
-    
-    [HideInInspector]
-    public SpriteRenderer spriteRenderer;
-    
-    [HideInInspector]
-    public Animator animator;
+    [HideInInspector] public PlayerDetailsSO playerDetails;
 
-    [HideInInspector]
-    public IdleEvent idleEvent;
+    [HideInInspector] public Health health;
 
-    [HideInInspector]
-    public AimWeaponEvent aimWeaponEvent;
+    [HideInInspector] public SpriteRenderer spriteRenderer;
 
-    [HideInInspector]
-    public FireWeaponEvent fireWeaponEvent;
+    [HideInInspector] public Animator animator;
 
-    [HideInInspector] 
-    public WeaponFiredEvent weaponFiredEvent;
+    [HideInInspector] public IdleEvent idleEvent;
 
-    [HideInInspector] 
-    public ReloadWeaponEvent reloadWeaponEvent;
+    [HideInInspector] public AimWeaponEvent aimWeaponEvent;
 
-    [HideInInspector] 
-    public WeaponReloadedEvent weaponReloadedEvent;
+    [HideInInspector] public FireWeaponEvent fireWeaponEvent;
 
-    [HideInInspector] 
-    public SetActiveWeaponEvent setActiveWeaponEvent;
+    [HideInInspector] public WeaponFiredEvent weaponFiredEvent;
 
-    [HideInInspector] 
-    public ActiveWeapon activeWeapon;
+    [HideInInspector] public ReloadWeaponEvent reloadWeaponEvent;
 
-    [HideInInspector] 
-    public MovementByVelocityEvent movementByVelocityEvent;
+    [HideInInspector] public WeaponReloadedEvent weaponReloadedEvent;
 
-    [HideInInspector]
-    public MovementToPositionEvent movementToPositionEvent;
+    [HideInInspector] public SetActiveWeaponEvent setActiveWeaponEvent;
+
+    [HideInInspector] public ActiveWeapon activeWeapon;
+
+    [HideInInspector] public MovementByVelocityEvent movementByVelocityEvent;
+
+    [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
 
     public List<Weapon> weaponList = new List<Weapon>();
+
     private void Awake()
     {
         //load components
@@ -94,14 +81,14 @@ public class Player : MonoBehaviour
         movementByVelocityEvent = GetComponent<MovementByVelocityEvent>();
         movementToPositionEvent = GetComponent<MovementToPositionEvent>();
     }
-    
+
     //Initialize the player
     public void Initialize(PlayerDetailsSO playerDetails)
     {
         this.playerDetails = playerDetails;
-        
+
         CreatePlayerStartingWeapons();
-        
+
         SetPlayerHealth();
     }
 
@@ -121,6 +108,11 @@ public class Player : MonoBehaviour
         health.SetStartingHealth(playerDetails.playerHealthAmount);
     }
 
+    public Vector3 GetPlayerPosition()
+    {
+        return transform.position;
+    }
+
     public Weapon AddWeaponToPlayer(WeaponDetailsSO weaponDetails)
     {
         Weapon weapon = new Weapon()
@@ -129,11 +121,11 @@ public class Player : MonoBehaviour
             weaponClipRemainingAmmo = weaponDetails.weaponClipAmmoCapacity,
             weaponRemainingAmmo = weaponDetails.weaponAmmoCapacity, isWeaponReloading = false
         };
-        
+
         weaponList.Add(weapon);
 
         weapon.weaponListPosition = weaponList.Count;
-        
+
         setActiveWeaponEvent.CallSetActiveWeaponEvent(weapon);
 
         return weapon;

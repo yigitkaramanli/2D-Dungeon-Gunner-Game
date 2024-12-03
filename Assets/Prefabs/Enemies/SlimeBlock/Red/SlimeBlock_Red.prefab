@@ -35,6 +35,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4681957730172504058, guid: d61aafe577dd949d28d0243ec112ec43, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: cb1dd37a0c4264b0698d17c9da3d8f37, type: 2}
     - target: {fileID: 6848626921525205400, guid: d61aafe577dd949d28d0243ec112ec43, type: 3}
       propertyPath: m_Color.b
       value: 0.47058824
@@ -47,6 +51,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7101517712014144154, guid: d61aafe577dd949d28d0243ec112ec43, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 3e6bc182787e64cc98935c59b5a813ee, type: 2}
     - target: {fileID: 8539404180901488309, guid: d61aafe577dd949d28d0243ec112ec43, type: 3}
       propertyPath: m_RootOrder
       value: 0
