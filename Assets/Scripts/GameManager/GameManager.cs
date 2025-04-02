@@ -27,8 +27,7 @@ public class GameManager : SingletonMonobehavior<GameManager>
     private PlayerDetailsSO playerDetails;
     private Player player;
 
-    [HideInInspector]
-    public GameState gameState;
+    [HideInInspector] public GameState gameState;
 
     protected override void Awake()
     {
@@ -98,13 +97,14 @@ public class GameManager : SingletonMonobehavior<GameManager>
 
     private void PlayDungeonLevel(int dungeonLevelListIndex)
     {
-        bool dungeonBuiltSuccessfully = DungeonBuilder.Instance.GenerateDungeon(dungeonLevelList[dungeonLevelListIndex]);
+        bool dungeonBuiltSuccessfully =
+            DungeonBuilder.Instance.GenerateDungeon(dungeonLevelList[dungeonLevelListIndex]);
 
         if (!dungeonBuiltSuccessfully)
         {
             Debug.LogError("Could not build dungeon from specified rooms and node graphs.");
         }
-        
+
         StaticEventHandler.CallRoomChangedEvent(currentRoom);
 
         player.gameObject.transform.position = new Vector3((currentRoom.lowerBounds.x + currentRoom.upperBounds.x) / 2f,
@@ -113,12 +113,12 @@ public class GameManager : SingletonMonobehavior<GameManager>
         player.gameObject.transform.position =
             HelperUtilities.GetSpawnPositionNearestToPlayer(player.gameObject.transform.position);
     }
-    
+
     public Room GetCurrentRoom()
     {
         return currentRoom;
     }
-    
+
     public Player GetPlayer()
     {
         return player;
@@ -127,6 +127,11 @@ public class GameManager : SingletonMonobehavior<GameManager>
     public Sprite GetPlayerMinimapIcon()
     {
         return playerDetails.playerMinimapIcon;
+    }
+
+    public DungeonLevelSO GetCurrentDungeonLevel()
+    {
+        return dungeonLevelList[currentDungeonLevelListIndex];
     }
 
     #region Validation
@@ -138,7 +143,4 @@ public class GameManager : SingletonMonobehavior<GameManager>
 
 #endif
     #endregion
-
-
-    
 }
