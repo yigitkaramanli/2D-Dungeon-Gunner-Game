@@ -43,7 +43,14 @@ public class Enemy : MonoBehaviour
     public void EnemyInitialization(EnemyDetailsSO enemDetails, int enemySpawnNumber, DungeonLevelSO dungeonLevel)
     {
         this.enemyDetails = enemDetails;
+
+        SetEnemyMovementUpdateFrame(enemySpawnNumber);
         SetEnemyAnimationSpeed();
+    }
+
+    private void SetEnemyMovementUpdateFrame(int enemySpawnNumber)
+    {
+        enemyMovementAI.SetUpdatedFrameNumber(enemySpawnNumber % Settings.targetFrameRateToSpreadPathfindingOver);
     }
 
     private void SetEnemyAnimationSpeed()
