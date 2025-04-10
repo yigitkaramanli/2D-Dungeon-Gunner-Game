@@ -21,6 +21,7 @@ public class EnemyMovementAI : MonoBehaviour
     private WaitForFixedUpdate waitForFixedUpdate;
     [HideInInspector] public float moveSpeed;
     private bool chasePlayer = false;
+    [HideInInspector] public int updateFrameNumber = 1;
 
     private void Awake()
     {
@@ -48,6 +49,12 @@ public class EnemyMovementAI : MonoBehaviour
             enemy.enemyDetails.chaseDistance)
         {
             chasePlayer = true;
+        }
+
+        //Only process A* path rebuild on certain frames to load between enemies
+        if (Time.frameCount % Settings.targetFrameRateToSpreadPathfindingOver != updateFrameNumber)
+        {
+            return;
         }
 
         if (!chasePlayer)
@@ -116,6 +123,12 @@ public class EnemyMovementAI : MonoBehaviour
         {
             enemy.idleEvent.CallIdleEvent();
         }
+    }
+
+    //Set the frame that this enemy is allocated to recalculate its pathfinding on - to avoid performance spikes
+    public void SetUpdatedFrameNumber(int updatedFrameNumber)
+    {
+        this.updateFrameNumber = updatedFrameNumber;
     }
 
     private Vector3Int GetNearestNonObstaclePlayerPosition(Room currentRoom)

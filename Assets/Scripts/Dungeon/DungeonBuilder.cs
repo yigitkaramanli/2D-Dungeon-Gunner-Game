@@ -15,7 +15,7 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
     private List<RoomTemplateSO> roomTemplateList = null;
     private RoomNodeTypeListSO roomNodeTypeList;
     private bool dungeonBuildSuccessfull;
-    
+
 
     protected override void Awake()
     {
@@ -56,19 +56,21 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
             int dungeonBuildAttemptsForThisNodeGraph = 0;
             dungeonBuildSuccessfull = false;
 
-            while (!dungeonBuildSuccessfull && dungeonBuildAttemptsForThisNodeGraph <= Settings.maxDungeonRebuildAttemptsForRoomGraph)
+            while (!dungeonBuildSuccessfull &&
+                   dungeonBuildAttemptsForThisNodeGraph <= Settings.maxDungeonRebuildAttemptsForRoomGraph)
             {
                 ClearDungeon();
                 dungeonBuildAttemptsForThisNodeGraph++;
 
                 dungeonBuildSuccessfull = AttemptToBuildRandomDungeon(roomNodeGraph);
-
             }
+
             if (dungeonBuildSuccessfull)
             {
                 InstantiateRoomGameObjects();
             }
         }
+
         return dungeonBuildSuccessfull;
     }
 
@@ -123,7 +125,8 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
     }
 
     //process rooms in the open room node queue, return true if no room overlaps
-    private bool ProcessRoomsInOpenRoomNodeQueue(RoomNodeGraphSO roomNodeGraph, Queue<RoomNodeSO> openRoomNodeQueue, bool noRoomOverlaps)
+    private bool ProcessRoomsInOpenRoomNodeQueue(RoomNodeGraphSO roomNodeGraph, Queue<RoomNodeSO> openRoomNodeQueue,
+        bool noRoomOverlaps)
     {
         while (openRoomNodeQueue.Count > 0 && noRoomOverlaps)
         {
@@ -161,21 +164,23 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
 
         while (roomOverlaps)
         {
-            List<Doorway> unconnectedAvailableParentDoorways = GetUnconnectedAvailableDoorways(parentRoom.doorWayList).ToList();
+            List<Doorway> unconnectedAvailableParentDoorways =
+                GetUnconnectedAvailableDoorways(parentRoom.doorWayList).ToList();
 
             if (unconnectedAvailableParentDoorways.Count == 0)
             {
                 return false;
             }
 
-            Doorway doorwayParent = unconnectedAvailableParentDoorways[Random.Range(0, unconnectedAvailableParentDoorways.Count)];
+            Doorway doorwayParent =
+                unconnectedAvailableParentDoorways[Random.Range(0, unconnectedAvailableParentDoorways.Count)];
 
             RoomTemplateSO roomTemplate = GetRandomTemplateForRoomConsistentWithParent(roomNode, doorwayParent);
 
 
             Room room = CreateRoomFromRoomTemplate(roomTemplate, roomNode);
 
-            if(PlaceTheRoom(parentRoom, doorwayParent, room))
+            if (PlaceTheRoom(parentRoom, doorwayParent, room))
             {
                 roomOverlaps = false;
 
@@ -229,14 +234,15 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
     {
         Doorway doorway = GetOppositeDoorway(doorwayParent, room.doorWayList);
 
-        if(doorway == null)
+        if (doorway == null)
         {
             doorwayParent.isUnavailable = true;
             return false;
         }
 
         //calculate "world" grid parent doorway position
-        Vector2Int parentDoorwayPosition = parentRoom.lowerBounds + doorwayParent.position - parentRoom.roomTemplateLowerBounds;
+        Vector2Int parentDoorwayPosition =
+            parentRoom.lowerBounds + doorwayParent.position - parentRoom.roomTemplateLowerBounds;
 
         Vector2Int adjustment = Vector2Int.zero;
 
@@ -307,12 +313,13 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
                 return doorway;
             }
         }
+
         return null;
     }
 
     private Room CheckForRoomOverlap(Room roomToTest)
     {
-        foreach (KeyValuePair<string,Room> keyValuePair in dungeonBuilderRoomDictionary)
+        foreach (KeyValuePair<string, Room> keyValuePair in dungeonBuilderRoomDictionary)
         {
             Room room = keyValuePair.Value;
 
@@ -321,7 +328,7 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
                 continue;
             }
 
-            if (IsOverlappingRoom(roomToTest,room))
+            if (IsOverlappingRoom(roomToTest, room))
             {
                 return room;
             }
@@ -332,17 +339,19 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
 
     private bool IsOverlappingRoom(Room room1, Room room2)
     {
-        bool isOverlappingX = IsOverlappingInterval(room1.lowerBounds.x, room1.upperBounds.x, room2.lowerBounds.x, room2.upperBounds.x);
+        bool isOverlappingX = IsOverlappingInterval(room1.lowerBounds.x, room1.upperBounds.x, room2.lowerBounds.x,
+            room2.upperBounds.x);
 
-        bool isOverlappingY = IsOverlappingInterval(room1.lowerBounds.y, room1.upperBounds.y, room2.lowerBounds.y, room2.upperBounds.y);
+        bool isOverlappingY = IsOverlappingInterval(room1.lowerBounds.y, room1.upperBounds.y, room2.lowerBounds.y,
+            room2.upperBounds.y);
 
         return (isOverlappingX && isOverlappingY);
     }
 
     //Check if interval 1 overlaps interval 2. this method is called by the IsOverlappingRoom Method.
-    private bool IsOverlappingInterval( int imin1, int imax1, int imin2, int imax2)
+    private bool IsOverlappingInterval(int imin1, int imax1, int imin2, int imax2)
     {
-        if(Mathf.Max(imin1, imin2) <= Mathf.Min(imax1, imax2))
+        if (Mathf.Max(imin1, imin2) <= Mathf.Min(imax1, imax2))
         {
             return true;
         }
@@ -365,7 +374,7 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
             }
         }
 
-        if( matchingRoomTemplateList.Count == 0)
+        if (matchingRoomTemplateList.Count == 0)
         {
             return null;
         }
@@ -377,7 +386,7 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
     {
         foreach (Doorway doorway in roomDoorwayList)
         {
-            if(!doorway.isConnected && !doorway.isUnavailable)
+            if (!doorway.isConnected && !doorway.isUnavailable)
             {
                 yield return doorway;
             }
@@ -395,6 +404,8 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
         room.lowerBounds = roomTemplate.lowerBounds;
         room.upperBounds = roomTemplate.upperBounds;
         room.spawnPositionArray = roomTemplate.spawnPositionArray;
+        room.enemiesByLevelList = roomTemplate.enemiesByLevelList;
+        room.roomLevelEnemySpawnParametersList = roomTemplate.roomEnemySpawnParametersList;
         room.roomTemplateLowerBounds = roomTemplate.lowerBounds;
         room.roomTemplateUpperBounds = roomTemplate.upperBounds;
         room.childRoomIDList = CopyStringList(roomNode.childRoomNodeIDList);
@@ -404,7 +415,7 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
         {
             room.parentRoomID = "";
             room.isPreviouslyVisited = true;
-            
+
             GameManager.Instance.SetCurrentRoom(room);
         }
         else
@@ -412,8 +423,12 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
             room.parentRoomID = roomNode.parentRoomNodeIDList[0];
         }
 
-        return room;
+        if (room.GetNumberOfEnemiesToSpawn(GameManager.Instance.GetCurrentDungeonLevel()) == 0)
+        {
+            room.isClearedOfEnemies = true;
+        }
 
+        return room;
     }
 
     private RoomNodeGraphSO SelectRandomRoomNodeGraph(List<RoomNodeGraphSO> roomNodeGraphList)
@@ -466,7 +481,7 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
 
     private void InstantiateRoomGameObjects()
     {
-        foreach (KeyValuePair<string,Room> keyValuePair in dungeonBuilderRoomDictionary)
+        foreach (KeyValuePair<string, Room> keyValuePair in dungeonBuilderRoomDictionary)
         {
             Room room = keyValuePair.Value;
 
@@ -478,7 +493,7 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
             InstantiatedRoom instantiatedRoom = roomGameObject.GetComponentInChildren<InstantiatedRoom>();
 
             instantiatedRoom.room = room;
-            
+
             instantiatedRoom.Initialize(roomGameObject);
 
             room.instantiatedRoom = instantiatedRoom;
@@ -488,7 +503,7 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
     //get room template by room template ID
     public RoomTemplateSO GetRoomTemplate(string roomTemplateID)
     {
-        if(roomTemplateDictionary.TryGetValue(roomTemplateID, out RoomTemplateSO roomTemplate))
+        if (roomTemplateDictionary.TryGetValue(roomTemplateID, out RoomTemplateSO roomTemplate))
         {
             return roomTemplate;
         }
@@ -501,7 +516,7 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
     //get room by room id
     public Room GetRoom(string roomID)
     {
-        if(dungeonBuilderRoomDictionary.TryGetValue(roomID, out Room room))
+        if (dungeonBuilderRoomDictionary.TryGetValue(roomID, out Room room))
         {
             return room;
         }
@@ -516,7 +531,7 @@ public class DungeonBuilder : SingletonMonobehavior<DungeonBuilder>
     {
         if (dungeonBuilderRoomDictionary.Count > 0)
         {
-            foreach (KeyValuePair<string,Room> keyValuePair in dungeonBuilderRoomDictionary)
+            foreach (KeyValuePair<string, Room> keyValuePair in dungeonBuilderRoomDictionary)
             {
                 Room room = keyValuePair.Value;
 
