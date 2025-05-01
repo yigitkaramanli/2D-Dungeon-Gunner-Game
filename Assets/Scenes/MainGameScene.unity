@@ -598,7 +598,7 @@ MonoBehaviour:
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8196721, y: 1}
+    m_SensorSize: {x: 1.196319, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2582,6 +2582,9 @@ MonoBehaviour:
   - poolSize: 20
     prefab: {fileID: 674283998645204560, guid: 538b09aa995df40748320f16de019728, type: 3}
     componentType: AmmoHitEffect
+  - poolSize: 200
+    prefab: {fileID: 2227020654575403849, guid: ebb00f038f8504297833712a3a7d4840, type: 3}
+    componentType: IFireable
 --- !u!4 &1843568837
 Transform:
   m_ObjectHideFlags: 0
