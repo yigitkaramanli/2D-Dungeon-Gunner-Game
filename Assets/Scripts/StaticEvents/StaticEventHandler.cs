@@ -1,18 +1,30 @@
 using System;
 using UnityEngine;
 
-public static class StaticEventHandler 
+public static class StaticEventHandler
 {
     //Room Changed Event
     public static event Action<RoomChangedEventArgs> OnRoomChanged;
 
     public static void CallRoomChangedEvent(Room room)
     {
-        OnRoomChanged?.Invoke(new RoomChangedEventArgs(){ room = room});
+        OnRoomChanged?.Invoke(new RoomChangedEventArgs() { room = room });
+    }
+
+    public static event Action<RoomEnemiesDefeatedArgs> OnRoomEnemiesDefeated;
+
+    public static void CallRoomEnemiesDefeated(Room room)
+    {
+        OnRoomEnemiesDefeated?.Invoke(new RoomEnemiesDefeatedArgs() { room = room });
     }
 }
 
 public class RoomChangedEventArgs : EventArgs
+{
+    public Room room;
+}
+
+public class RoomEnemiesDefeatedArgs : EventArgs
 {
     public Room room;
 }

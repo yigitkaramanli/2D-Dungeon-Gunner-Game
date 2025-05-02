@@ -42,12 +42,12 @@ public class Ammo : MonoBehaviour, IFireable
             SetAmmoMaterial(ammoDetails.ammoMaterial);
             isAmmoMaterialSet = true;
         }
-        
+
         //Calculate distance vector to move ammo
         Vector3 distanceVector = fireDirectionVector * ammoSpeed * Time.deltaTime;
 
         transform.position += distanceVector;
-        
+
         //Disable after max range
         ammoRange -= distanceVector.magnitude;
 
@@ -59,10 +59,20 @@ public class Ammo : MonoBehaviour, IFireable
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        DealDamage(other);
         AmmoHitEffect();
         DisableAmmo();
     }
-    
+
+    private void DealDamage(Collider2D collision)
+    {
+        Health health = collision.GetComponent<Health>();
+        if (health != null)
+        {
+            health.TakeDamage(ammoDetails.ammoDamage);
+        }
+    }
+
     //Initialise the ammo being fired using the ammoDetails, aimAngle, weaponAngle, and weaponAimDirectionVector
     //If this ammo is part of a pattern the ammo movement can be overriden by setting overrideAmmoMocement to true
     public void InitialiseAmmo(AmmoDetailsSO ammoDetails, float aimAngle, float weaponAimAngle, float ammoSpeed,
@@ -70,13 +80,13 @@ public class Ammo : MonoBehaviour, IFireable
     {
         #region Ammo
         this.ammoDetails = ammoDetails;
-        
+
         //Set fire direction
         SetFireDirection(ammoDetails, aimAngle, weaponAimAngle, weaponAimDirectionVector);
-        
+
         //Set ammo sprite
         spriteRenderer.sprite = ammoDetails.ammoSprite;
-        
+
         //Set initial ammo material depending on whether there is ammo charge period
         if (ammoDetails.ammoChargeTime > 0f)
         {
@@ -90,16 +100,16 @@ public class Ammo : MonoBehaviour, IFireable
             SetAmmoMaterial(ammoDetails.ammoMaterial);
             isAmmoMaterialSet = true;
         }
-        
+
         //Set ammo range
         ammoRange = ammoDetails.ammoRange;
-        
+
         //Set ammo speed
         this.ammoSpeed = ammoSpeed;
-        
+
         //Override ammo movement;
         this.overrideAmmoMovement = overrideAmmoMovement;
-        
+
         //Activate ammo gameobject
         gameObject.SetActive(true);
         #endregion
@@ -119,7 +129,6 @@ public class Ammo : MonoBehaviour, IFireable
             trailRenderer.emitting = false;
             trailRenderer.gameObject.SetActive(false);
         }
-        
         #endregion
     }
 
@@ -157,9 +166,9 @@ public class Ammo : MonoBehaviour, IFireable
             AmmoHitEffect ammoHitEffect =
                 (AmmoHitEffect)PoolManager.Instance.ReuseComponent(ammoDetails.ammoHitEffect.ammoHitEffectPrefab,
                     transform.position, Quaternion.identity);
-            
+
             ammoHitEffect.SetHitEffect(ammoDetails.ammoHitEffect);
-            
+
             ammoHitEffect.gameObject.SetActive(true);
         }
     }
