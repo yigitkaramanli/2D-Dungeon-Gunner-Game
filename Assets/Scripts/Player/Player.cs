@@ -5,7 +5,10 @@ using UnityEngine;
 using UnityEngine.Rendering;
 
 #region REQUIRE COMPONENTS
+[RequireComponent(typeof(HealthEvent))]
 [RequireComponent(typeof(Health))]
+[RequireComponent(typeof(DestroyedEvent))]
+[RequireComponent(typeof(Destroyed))]
 [RequireComponent(typeof(SortingGroup))]
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Animator))]
@@ -35,31 +38,20 @@ using UnityEngine.Rendering;
 public class Player : MonoBehaviour
 {
     [HideInInspector] public PlayerDetailsSO playerDetails;
-
+    [HideInInspector] public HealthEvent healthEvent;
     [HideInInspector] public Health health;
-
+    [HideInInspector] public DestroyedEvent destroyedEvent;
     [HideInInspector] public SpriteRenderer spriteRenderer;
-
     [HideInInspector] public Animator animator;
-
     [HideInInspector] public IdleEvent idleEvent;
-
     [HideInInspector] public AimWeaponEvent aimWeaponEvent;
-
     [HideInInspector] public FireWeaponEvent fireWeaponEvent;
-
     [HideInInspector] public WeaponFiredEvent weaponFiredEvent;
-
     [HideInInspector] public ReloadWeaponEvent reloadWeaponEvent;
-
     [HideInInspector] public WeaponReloadedEvent weaponReloadedEvent;
-
     [HideInInspector] public SetActiveWeaponEvent setActiveWeaponEvent;
-
     [HideInInspector] public ActiveWeapon activeWeapon;
-
     [HideInInspector] public MovementByVelocityEvent movementByVelocityEvent;
-
     [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
 
     public List<Weapon> weaponList = new List<Weapon>();
@@ -67,7 +59,9 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         //load components
+        healthEvent = GetComponent<HealthEvent>();
         health = GetComponent<Health>();
+        destroyedEvent = GetComponent<DestroyedEvent>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         idleEvent = GetComponent<IdleEvent>();
@@ -90,6 +84,26 @@ public class Player : MonoBehaviour
         CreatePlayerStartingWeapons();
 
         SetPlayerHealth();
+    }
+
+    private void OnEnable()
+    {
+        healthEvent.OnHealthChanged += HealthEvent_OnHealthChanged;
+    }
+
+    private void OnDisable()
+    {
+        healthEvent.OnHealthChanged -= HealthEvent_OnHealthChanged;
+    }
+
+    private void HealthEvent_OnHealthChanged(HealthEvent healthEvent, HealthEventArgs healthEventArgs)
+    {
+        Debug.Log("Health Amount: " + healthEventArgs.healthAmount);
+
+        if (healthEventArgs.healthAmount <= 0f)
+        {
+            destroyedEvent.CallDestroyedEvent(true);
+        }
     }
 
     private void CreatePlayerStartingWeapons()
